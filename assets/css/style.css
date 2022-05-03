@@ -121,12 +121,12 @@ body.active {
 
 /* CUSTOM FONT */
 @font-face {
-    font-family: 'Refault';
-    src: url('../fonts/REFAULT.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/REFAULT.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../fonts/REFAULT.woff') format('woff'), /* Modern Browsers */
-         url('../fonts/REFAULT.woff2') format('woff2'), /* Modern Browsers */
-         url('../fonts/REFAULT.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-family: "Refault";
+    src: url("../fonts/REFAULT.eot"); /* IE9 Compat Modes */
+    src: url("../fonts/REFAULT.eot?#iefix") format("embedded-opentype"),
+        /* IE6-IE8 */ url("../fonts/REFAULT.woff") format("woff"),
+        /* Modern Browsers */ url("../fonts/REFAULT.woff2") format("woff2"),
+        /* Modern Browsers */ url("../fonts/REFAULT.ttf") format("truetype"); /* Safari, Android, iOS */
     font-style: italic;
     font-weight: normal;
     text-rendering: optimizeLegibility;
@@ -181,4 +181,72 @@ body.active {
     visibility: hidden;
     z-index: 2;
     transition: var(--transition-2);
+}
+
+.navbar.active {
+    right: 0;
+    visibility: visible;
+    transition: var(--transition-3);
+}
+
+.navbar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+}
+
+.nav-close-btn {
+    color: var(--orange);
+    font-size: 25px;
+    padding: 10px;
+    transform: translateX(15px);
+}
+
+.nav.nav-close-btn ion-icon {
+    --ionicon-stroke-width: 70px;
+}
+
+.navbar-list {
+    border-top: 1px solid hsla(0, 0%, 100%, 0.1);
+    margin-bottom: 30px;
+}
+
+.navbar-link {
+    color: var(--white);
+    font-size: 15px;
+    padding: 10px 25px;
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+    font-weight: var(--fw-500);
+    transition: 0.15s ease-in-out;
+}
+
+.navbar-link:is(:hover, :focus) {
+    color: var(--orange);
+}
+
+.nav-social-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-link {
+    color: var(--orange);
+    font-size: 18px;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    transition: var(--transition-2);
+}
+
+.overlay.active {
+    background: hsla(0, 0%, 0%, 0.7);
+    pointer-events: all;
+    transition: var(--transition-3);
 }
