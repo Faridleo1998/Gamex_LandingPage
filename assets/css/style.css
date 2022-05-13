@@ -352,3 +352,83 @@ body.active {
 .hero .btn-primary ion-icon {
     font-size: 35px;
 }
+
+/* ABOUT */
+.section-wrapper {
+    background-image: url("../images/section-wrapper-bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.about {
+    background-image: url("../images/about-img-shadow.png") no-repeat;
+    background-size: 100%;
+    background-position: center;
+    padding: 120px 0 var(--section-padding);
+}
+
+.about-banner {
+    margin-bottom: 40px;
+}
+
+.about-img {
+    width: 100%;
+}
+
+.character {
+    display: none;
+}
+
+.about-content {
+    background: var(--raisin-black-1);
+    color: var(--white);
+    padding: 40px 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.2);
+}
+
+.about-subtitle {
+    color: var(--orange);
+    font-family: var(--ff-oswald);
+    font-size: var(--fs-8);
+    font-weight: var(--fw-500);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.about-title {
+    font-family: var(--ff-oswald);
+    font-size: var(--fs-2);
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.about-title strong {
+    color: var(--orange);
+}
+
+.about-text,
+.about-bottom-text {
+    color: var(--light-gray);
+    font-size: var(--fs-9);
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+}
+
+.about-text {
+    margin-bottom: 20px;
+}
+
+.about-bottom-text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.about-bottom-text ion-icon {
+    color: var(--orange);
+    font-size: 25px;
+    --ionicon-stroke-width: 45px;
+}
