@@ -206,6 +206,31 @@ body.active {
     width: 40px;
 }
 
+.section-title {
+    position: relative;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.section-title::before,
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 5px;
+    width: 120px;
+    background-color: var(--orange);
+    border-radius: 0 0 5px 5px;
+}
+
+.section-title::before {
+    bottom: -23px;
+    height: 4px;
+    width: 30px;
+}
+
 /* HEADER */
 .header {
     position: fixed;
@@ -564,4 +589,61 @@ body.active {
     width: 100%;
     border-radius: 4px;
     box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.2);
+}
+
+/* TEAM */
+.team {
+    padding: var(--section-padding) 0;
+}
+
+.team-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 70px;
+}
+
+.team-list li {
+    max-width: 40%;
+}
+
+.team-member {
+    position: relative;
+    border-radius: 50%;
+    border: 3px solid var(--raisin-black-3);
+    transition: var(--transition-1);
+}
+
+.team-member:is(:hover, :focus) {
+    border-color: var(--orange);
+}
+
+.team-member img {
+    width: 100%;
+    transition: var(--transition-3);
+}
+
+.team-list:is(:hover, :focus) img {
+    opacity: 0.5;
+}
+
+.team-member ion-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--orange);
+    font-size: 50px;
+    transition: var(--transition-1);
+    opacity: 0;
+}
+
+.team-member:is(:hover, :focus) ion-icon {
+    opacity: 1;
+}
+
+.team .btn-primary {
+    margin-inline: auto;
 }
