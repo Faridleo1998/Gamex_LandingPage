@@ -995,3 +995,27 @@ body.active {
     max-width: 100%;
     margin-inline: auto;
 }
+
+/* GO TO TOP */
+.go-top {
+    --polygon-1: polygon(70% 0, 100% 30%, 100% 100%, 30% 100%, 0 70%, 0 0);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition-1);
+}
+
+.go-top.active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.go-top:is(:hover, :focus) {
+    background: var(--white);
+    color: var(--orange);
+}
