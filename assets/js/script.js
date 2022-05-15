@@ -20,3 +20,14 @@ for (const elem of navElemArr) {
         elementToggleFunction(document.body);
     });
 }
+
+/* Go top */
+const gotTopBtn = document.querySelector("[data-go-top]");
+
+window.addEventListener("scroll", function () {
+    if (window.scrollY >= 800) {
+        gotTopBtn.classList.add("active");
+    } else {
+        gotTopBtn.classList.remove("active");
+    }
+});
